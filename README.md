@@ -96,12 +96,12 @@ First, make sure you have `npm` installed (`npm` comes with Node) and then :
 
 Install node dependencies
 ```bash
-npm install
+yarn install
 ```
 
 Run watcher in order to compile any changes automatically
 ```bash
-npm run watch
+yarn run watch
 ```
 
 ### Start the Symfony web server

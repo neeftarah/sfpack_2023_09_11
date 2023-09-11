@@ -25,7 +25,7 @@ class MovieRepository extends ServiceEntityRepository
     Récemment séparé de son vieux partenaire, retourné à la vie civile sans aucun souvenir de sa vie d'homme en noir, K, le plus expérimenté des agents du MIB décide de former J, un jeune policier. Ensemble, ils vont affronter une nouvelle menace : Edgar le cafard...
     DESC,
             'releasedAt' => '1997/08/06',
-            'picture' => 'https://fr.web.img3.acsta.net/c_310_420/pictures/14/05/26/16/57/120603.jpg',
+            'picture' => '120603.jpg',
             'genres' => ['Comédie', 'Science fiction', 'Action'],
             'slug' => '1997-men-in-black',
         ],
@@ -35,7 +35,7 @@ class MovieRepository extends ServiceEntityRepository
     Quelques décennies d'histoire américaine, des années 1940 à la fin du XXème siècle, à travers le regard et l'étrange odyssée d'un homme simple et pur, Forrest Gump.
     DESC,
             'releasedAt' => '1994/10/05',
-            'picture' => 'https://fr.web.img2.acsta.net/c_310_420/pictures/15/10/13/15/12/514297.jpg',
+            'picture' => '514297.jpg',
             'genres' => ['Romance', 'Drame', 'Comédie'],
             'slug' => '1994-forrest-gump',
         ],
@@ -45,7 +45,7 @@ class MovieRepository extends ServiceEntityRepository
     Evocation des années de guerre d'Oskar Schindler, fils d'industriel d'origine autrichienne rentré à Cracovie en 1939 avec les troupes allemandes. Il va, tout au long de la guerre, protéger des juifs en les faisant travailler dans sa fabrique et en 1944 sauver huit cents hommes et trois cents femmes du camp d'extermination de Auschwitz-Birkenau.
     DESC,
             'releasedAt' => '1994/03/02',
-            'picture' => 'https://fr.web.img4.acsta.net/c_310_420/pictures/19/03/14/10/37/5927961.jpg',
+            'picture' => '5927961.jpg',
             'genres' => ['Drame', 'Historique', 'Biopic'],
             'slug' => '1994-la-liste-de-schindler',
         ],
@@ -55,7 +55,7 @@ class MovieRepository extends ServiceEntityRepository
     Paul Edgecomb, pensionnaire centenaire d'une maison de retraite, est hanté par ses souvenirs. Gardien-chef du pénitencier de Cold Mountain en 1935, il était chargé de veiller au bon déroulement des exécutions capitales en s’efforçant d'adoucir les derniers moments des condamnés. Parmi eux se trouvait un colosse du nom de John Coffey, accusé du viol et du meurtre de deux fillettes. Intrigué par cet homme candide et timide aux dons magiques, Edgecomb va tisser avec lui des liens très forts.Paul Edgecomb, pensionnaire centenaire d'une maison de retraite, est hanté par ses souvenirs. Gardien-chef du pénitencier de Cold Mountain en 1935, il était chargé de veiller au bon déroulement des exécutions capitales en s’efforçant d'adoucir les derniers moments des condamnés. Parmi eux se trouvait un colosse du nom de John Coffey, accusé du viol et du meurtre de deux fillettes. Intrigué par cet homme candide et timide aux dons magiques, Edgecomb va tisser avec lui des liens très forts.
     DESC,
             'releasedAt' => '2000/03/01',
-            'picture' => 'https://fr.web.img2.acsta.net/c_310_420/medias/nmedia/18/66/15/78/19254683.jpg',
+            'picture' => '19254683.jpg',
             'genres' => ['Fantastique', 'Drame', 'Policier'],
             'slug' => '2000-la-ligne-verte',
         ],

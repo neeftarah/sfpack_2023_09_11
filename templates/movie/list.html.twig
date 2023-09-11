@@ -11,6 +11,7 @@
                     <div class="col">
                         <div class="card shadow-sm">
                             <div class="card-body">
+                                <img src="{{ asset('build/images/movies/' ~ movie.picture) }}" class="rounded float-start" alt="...">
                                 <p class="card-text">
                                     {% for genre in movie.genres %}
                                         <span class="badge bg-dark">{{ genre }}</span>
