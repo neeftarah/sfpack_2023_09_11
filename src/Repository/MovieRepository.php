@@ -35,7 +35,7 @@ class MovieRepository extends ServiceEntityRepository
     Quelques décennies d'histoire américaine, des années 1940 à la fin du XXème siècle, à travers le regard et l'étrange odyssée d'un homme simple et pur, Forrest Gump.
     DESC,
             'releasedAt' => '1994/10/05',
-            'picture' => '514297.jpg',
+            'picture' => '1994-forrest-gump.jpg',
             'genres' => ['Romance', 'Drame', 'Comédie'],
             'slug' => '1994-forrest-gump',
         ],
@@ -76,7 +76,7 @@ class MovieRepository extends ServiceEntityRepository
         $movie->setTitle($raw['title']);
         $movie->setDescription($raw['description']);
         $movie->setReleasedAt(new DateTimeImmutable($raw['releasedAt']));
-        $movie->setGenres($raw['genres']);
+        // $movie->setGenres($raw['genres']);
         $movie->setPicture($raw['picture']);
 
         return $movie;
@@ -95,5 +95,15 @@ class MovieRepository extends ServiceEntityRepository
     public static function listAll(): array
     {
         return array_map(self::hydrate(...), self::MOVIES);
+    }
+
+    public function searchBySlug(string $slug): ?Movie
+    {
+        return $this->findOneBy(['slug' => $slug]);
+    }
+
+    public function searchAll(): array
+    {
+        return $this->findAll();
     }
 }

@@ -8,13 +8,16 @@
                 <img src="{{ asset('build/images/movies/' ~ movie.picture) }}" class="rounded float-start" alt="...">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">{{ movie.title|title }}</h1>
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                    {{ movie.title|title }}
+                    <a href="{{ path('app_movies_edit', {'slug': movie.slug})}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                </h1>
                 <small>({{ movie.releasedAt|format_date('medium') }})</small>
                 <p class="lead">
                     <span>{{ movie.description }}</span>
                 <ul>
                     <li>
-                        Genres: {{ movie.genres|join(', ') }}
+{#                        Genres: {{ movie.genres|join(', ') }}#}
                     </li>
                 </ul>
                 </p>

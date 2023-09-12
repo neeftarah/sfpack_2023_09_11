@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Add movie
+{% endblock %}
+
+{% block main %}
+    {% if editing %}
+    <h1>Edit Movie "{{ movie.title }}" <span class="small"><a href="{{ path('app_movies_details', {'slug': movie.slug})}}">[RETOUR]</a></span></h1>
+    {% else %}
+    <h1>Add Movie <span class="small"><a href="{{ path('app_movies_list') }}">[RETOUR]</a></span></h1>
+    {% endif %}
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="w-100 btn btn-primary btn-block">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}
+

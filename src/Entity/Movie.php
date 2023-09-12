@@ -16,7 +16,7 @@ class Movie
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
     private string $slug;
 
     #[ORM\Column(length: 255)]
@@ -30,6 +30,14 @@ class Movie
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $picture = null;
+
+    #[ORM\ManyToMany(targetEntity: Genre::class, inversedBy: 'movies')]
+    private Collection $genres;
+
+    public function __construct()
+    {
+        $this->genres = new ArrayCollection();
+    }
 
     public function getSlug(): string
     {
@@ -122,5 +130,13 @@ class Movie
         }
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, Genre>
+     */
+    public function getGenres(): Collection
+    {
+        return $this->genres;
     }
 }

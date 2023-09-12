@@ -22,7 +22,7 @@ class GenreRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Genre[] Returns an array of Genre objects
+//     * @return GenreFixtures[] Returns an array of GenreFixtures objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class GenreRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Genre
+//    public function findOneBySomeField($value): ?GenreFixtures
 //    {
 //        return $this->createQueryBuilder('g')
 //            ->andWhere('g.exampleField = :val')
