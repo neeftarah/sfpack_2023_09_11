@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MovieRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -29,8 +31,6 @@ class Movie
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $picture = null;
 
-    private array $genres;
-
     public function getSlug(): string
     {
         return $this->slug;
@@ -39,16 +39,6 @@ class Movie
     public function setSlug(string $slug): void
     {
         $this->slug = $slug;
-    }
-
-    public function getGenres(): array
-    {
-        return $this->genres;
-    }
-
-    public function setGenres(array $genres): void
-    {
-        $this->genres = $genres;
     }
 
     public function getId(): ?int
@@ -100,6 +90,36 @@ class Movie
     public function setPicture(?string $picture): static
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Genre>
+     */
+    public function getGenre(): Collection
+    {
+        return $this->Genre;
+    }
+
+    public function addGenre(Genre $genre): static
+    {
+        if (!$this->Genre->contains($genre)) {
+            $this->Genre->add($genre);
+            $genre->setMovies($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGenre(Genre $genre): static
+    {
+        if ($this->Genre->removeElement($genre)) {
+            // set the owning side to null (unless already changed)
+            if ($genre->getMovies() === $this) {
+                $genre->setMovies(null);
+            }
+        }
 
         return $this;
     }
